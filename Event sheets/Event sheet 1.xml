@@ -1,0 +1,248 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet 1</name>
+    <events>
+        <variable comment="Max amount of speed for all type thingies" constant="1" name="UPPER_BOUND_SPEED" sid="128536804648003" static="0" type="number">10</variable>
+        <variable comment="interval between spawn" constant="0" name="interval" sid="221291981384435" static="0" type="number">3</variable>
+        <variable comment="Basically how many type2&apos;s destroyed" constant="0" name="score" sid="182651605078758" static="0" type="number">0</variable>
+        <event-block any="1" sid="317056648496442">
+            <conditions>
+                <condition id="17" name="On tap object" sid="345536540208906" type="Touch">
+                    <param id="0" name="Object">leftBtn</param>
+                </condition>
+                <condition id="0" name="On key pressed" sid="792707460106830" type="Keyboard">
+                    <param id="0" name="Key">49 (1)</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <comment>Well, GG because you are not supposed to tap on type1&apos;s</comment>
+                <event-block sid="641398890509261">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="585378783772128" type="leftBtn">
+                            <param id="0" name="Object">type1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="600550461249167" type="System">
+                            <param id="0" name="Layout">Layout 2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Game continues, the score is updated via a type2 onDestroy hook</comment>
+                <event-block sid="213741869661119">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="961920801736915" type="leftBtn">
+                            <param id="0" name="Object">type2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="931988986732406" type="type2" />
+                    </actions>
+                </event-block>
+                <comment>type1&apos;s test would have left already, so the else clause is safe</comment>
+                <event-block sid="243950764024293">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="473352829742248" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="641803154647035" type="System">
+                            <param id="0" name="Layout">Layout 2</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block any="1" sid="156336480547763">
+            <conditions>
+                <condition id="17" name="On tap object" sid="258199247984702" type="Touch">
+                    <param id="0" name="Object">midBtn</param>
+                </condition>
+                <condition id="0" name="On key pressed" sid="594979471254258" type="Keyboard">
+                    <param id="0" name="Key">50 (2)</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="724219030070980">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="726757087621619" type="midBtn">
+                            <param id="0" name="Object">type1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="663045076063110" type="System">
+                            <param id="0" name="Layout">Layout 2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="286182018577774">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="844007125097672" type="midBtn">
+                            <param id="0" name="Object">type2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="633078283757484" type="type2" />
+                    </actions>
+                </event-block>
+                <event-block sid="442885411540263">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="803970130332987" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="748588503710394" type="System">
+                            <param id="0" name="Layout">Layout 2</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block any="1" sid="299037344802931">
+            <conditions>
+                <condition id="17" name="On tap object" sid="360260079869699" type="Touch">
+                    <param id="0" name="Object">rightBtn</param>
+                </condition>
+                <condition id="0" name="On key pressed" sid="511217063898042" type="Keyboard">
+                    <param id="0" name="Key">51 (3)</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="559829386801418">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="268527039440371" type="rightBtn">
+                            <param id="0" name="Object">type1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="956266304436095" type="System">
+                            <param id="0" name="Layout">Layout 2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="136570773291756">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="704159329954430" type="rightBtn">
+                            <param id="0" name="Object">type2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="974038458952170" type="type2" />
+                    </actions>
+                </event-block>
+                <event-block sid="797492555440627">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="256332054373371" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="619666582426843" type="System">
+                            <param id="0" name="Layout">Layout 2</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="674311169358327">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="827779698126511" type="System">
+                    <param id="0" name="Interval (seconds)">(ceil(interval)&lt;1)?0.2:ceil(interval)</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <comment>Spawn either type1 or type2. When type 1, do not tap. When type 2, tap.</comment>
+                <event-block sid="672966561600809">
+                    <conditions>
+                        <condition id="-16" name="Pick random instance" sid="857299990824422" type="System">
+                            <param id="0" name="Object">spawn</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="167251526952325">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="581205011192983" type="System">
+                                    <param id="0" name="First value">random(0,8)</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Second value">5</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="731942018494232" type="spawn">
+                                    <param id="0" name="Object">type1</param>
+                                    <param id="1" name="Layer">0</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="690765101135086">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="349284756431590" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="149716129088349" type="spawn">
+                                    <param id="0" name="Object">type2</param>
+                                    <param id="1" name="Layer">0</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="132071814045366">
+            <conditions>
+                <condition id="-11" name="For Each" sid="951877772961556" type="System">
+                    <param id="0" name="Object">type1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Set Y" sid="142139342861947" type="type1">
+                    <param id="0" name="Y">type1.Y+UPPER_BOUND_SPEED-interval</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="641203172647023">
+            <conditions>
+                <condition id="-11" name="For Each" sid="732524180664652" type="System">
+                    <param id="0" name="Object">type2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Set Y" sid="487652628412054" type="type2">
+                    <param id="0" name="Y">type2.Y+UPPER_BOUND_SPEED-interval</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="230031759496778">
+            <conditions>
+                <condition id="-19" name="On destroyed" sid="378540547566546" type="type2" />
+            </conditions>
+            <actions>
+                <action id="-10" name="Add to" sid="381618482457158" type="System">
+                    <param id="0" name="Variable">score</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-11" name="Subtract from" sid="605609448709220" type="System">
+                    <param id="0" name="Variable">interval</param>
+                    <param id="1" name="Value">0.1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="175312483252299">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="899805679849244" type="bottomBorder">
+                    <param id="0" name="Object">type2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="178751488746779" type="System">
+                    <param id="0" name="Layout">Layout 2</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
