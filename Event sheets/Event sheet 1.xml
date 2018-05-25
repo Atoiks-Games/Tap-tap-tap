@@ -10,7 +10,7 @@
         <event-block any="1" sid="317056648496442">
             <conditions>
                 <condition id="17" name="On tap object" sid="345536540208906" type="Touch">
-                    <param id="0" name="Object">leftBtn</param>
+                    <param id="0" name="Object">Lclick</param>
                 </condition>
                 <condition id="0" name="On key pressed" sid="792707460106830" type="Keyboard">
                     <param id="0" name="Key">49</param>
@@ -58,7 +58,7 @@
         <event-block any="1" sid="156336480547763">
             <conditions>
                 <condition id="17" name="On tap object" sid="258199247984702" type="Touch">
-                    <param id="0" name="Object">midBtn</param>
+                    <param id="0" name="Object">Mclick</param>
                 </condition>
                 <condition id="0" name="On key pressed" sid="594979471254258" type="Keyboard">
                     <param id="0" name="Key">50</param>
@@ -103,7 +103,7 @@
         <event-block any="1" sid="299037344802931">
             <conditions>
                 <condition id="17" name="On tap object" sid="360260079869699" type="Touch">
-                    <param id="0" name="Object">rightBtn</param>
+                    <param id="0" name="Object">Rclick</param>
                 </condition>
                 <condition id="0" name="On key pressed" sid="511217063898042" type="Keyboard">
                     <param id="0" name="Key">51</param>
@@ -242,6 +242,19 @@
             <actions>
                 <action id="-2" name="Go to layout" sid="178751488746779" type="System">
                     <param id="0" name="Layout">Layout 2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="807270597539723">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="687833921569877" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="207721190777179" type="Audio">
+                    <param id="0" name="Audio file">Tap3</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
                 </action>
             </actions>
         </event-block>
